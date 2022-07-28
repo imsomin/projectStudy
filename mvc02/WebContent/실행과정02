@@ -1,0 +1,46 @@
+○ 사용자 최초 요청 주소
+http://localhost:8090/mvc02/send.do
+
+
+
+○ 물리적 파일 구성 
+-SendController.java      -> 컨트롤러 객체
+-Send.jsp                 -> 뷰 객체
+
+-ReceiveController.java   -> 컨트롤러 객체
+-Receive.jsp              -> 뷰 객체
+
+-dispatcher-servlet.xml   -> 컨트롤러 객체 등록 /URL 매핑 주소 등록
+-web.xml                  -> DispatcherServlet 객체 등록 /URL 매핑 주소 등록
+
+
+
+○ 우리가 작성한 mvc02 프로젝트의 실행 및 처리 과정 정리
+
+① 외부 요청
+http://localhost:8090/mvc02/send.do
+
+-> web.xml 관여
+   (-> Front Controller 등록 -> DispatcherServlet 등록)
+
+② DispatcherServlet 요청 접수
+
+-> web.xml -> DispatcherServlet 등록
+   web.xml -> URL 패턴 등록
+
+-> 사용자 요청 분석 -> 특정 컨트롤러 지정
+
+③ 해당 컨트롤러의 특정 메소드 호출(액션 처리, ModelAndView 객체 반환)
+
+-> 사용자의 요청에 맞는 액션 처리
+-> 결과 데이터가 들어있는 모델 객체 준비
+-> 뷰 정보(JSP 페이지 정보) 반환
+
+※ JSP 페이지 정보
+- 여기서는 객체가 아닌 경로 포함된 View 페이지의 이름
+
+④ 뷰 페이지에서 최종 웹 페이지를 작성
+
+-> JSP 페이지 내에서 EL 이나 JSTL 등의 표기 사용 가능
+
+⑤ 응답 완료~!!!
