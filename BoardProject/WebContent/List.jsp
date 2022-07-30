@@ -11,6 +11,16 @@
    String cp = request.getContextPath();
 %>
 <%
+	String userID = (String)session.getAttribute("userID");
+	if (userID == null) {
+		response.sendRedirect("./login.jsp");
+	} 
+
+%>
+
+
+
+<%
    
    // 이전 페이지로부터(List.jsp- 스스로 던지고 스스로 받기) 데이터 수신(pageNum, num, searchKey, searchValue...)
    
@@ -111,7 +121,7 @@
    //직접 본문 보게 됨
    //상품 보러 들어갔다가 다시 리스트로 돌아가기 버튼을 눌렀을 때
    //1 페이지 리스트를 보는 게 아니라
-   //해당 상품을 눌렀을 때의 페이지 리스트를 볼 수 있게 해주어야 한다....
+   //해당 상품을 눌렀을 때의 페이지 리스트를 볼 수 있게 해주어야 한다
    if (param.equals(""))
    {
       articleUrl = articleUrl + "?pageNum=" + currentPage;
@@ -178,7 +188,6 @@ h3{
 }
 
 
-
 </style>
 
 
@@ -227,10 +236,13 @@ h3{
 </head>
 <body>
 
+<!-- 로그인 정보 보여주기 -->
+<div id="idInfo" style="display: inclin-block; margin:5px; float: right;">
+<%=userID %>님 안녕하세요</div>
 
 <br />
 <br />
-<br />
+
 
 <div id="bbsList">
 
@@ -280,7 +292,7 @@ h3{
                %>
                
             </select>
-            <!-- 검색한 값이 남아있을 수 있도록  value=추가~~~ -->
+            <!-- 검색한 값이 남아있을 수 있도록  value=추가 -->
             <input type="text" name="searchValue" class="textFiled" value="<%=searchValue%>">
             <input type="button" value="검색" class="btn2" onclick="sendIt()">
          </form>
@@ -327,7 +339,7 @@ h3{
          }
          %>
           
-      </div>
+      </div><!-- #lists -->
       
       <div id="footer">
          <!-- <p>1 Prev 21 22 23 24 25 26 27 28 29 30 Next 42</p> -->

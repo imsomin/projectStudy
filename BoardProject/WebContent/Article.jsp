@@ -152,7 +152,7 @@ h3{
 				<dd><%=dto.getHitCount() %></dd>
 			</dl>
 		
-		</div><!--  -->
+		</div><!-- close bottomLine -->
 		
 		
 		<div id="bbsArticle_content">
@@ -165,7 +165,7 @@ h3{
 				</tr>
 			</table>
 		
-		</div><!--  -->
+		</div><!-- close content -->
 		
 		
 		<div class="bbsArticle_bottomLine">
@@ -189,7 +189,7 @@ h3{
 			}
 			%>
 			
-		</div><!--  -->
+		</div><!-- close bottomLine  -->
 		
 		<div class="bbsArticle_noLine">
 			<!-- 다음글 : (102) 날씨 관련 게시물 -->
@@ -199,7 +199,7 @@ h3{
 			{
 			%>
 				<a href="<%=cp %>/Article.jsp?pageNum=<%=pageNum %>&num=<%=nextNum %>"  >
-				다음글 : (<%=nextNum %>) <%=dtoNext.getSubject() %>   <!-- DAO check~~★★★ -->
+				다음글 : (<%=nextNum %>) <%=dtoNext.getSubject() %>  
 				</a>
 			<%
 			}
@@ -211,17 +211,17 @@ h3{
 			}
 			%>
 			
-		</div><!--  -->
+		</div><!-- close noLine -->
 
 		
 		
-	</div><!-- close #bbsArticle -->         <!-- check~!!! -->
+	</div><!-- close #bbsArticle -->      
 
 
 	<div class="bbsArticle_noLine" style="text-align: right;">
 		<!-- From : 211.238.142.151 -->
 		From : <%=dto.getIpAddr() %>
-	</div><!--  -->
+	</div><!-- close noLine -->
 
 	<div id="bbsArticle_footer">
 		<div id="leftFooter">
@@ -237,14 +237,10 @@ h3{
 		</div>
 		
 		
-	</div><!-- close #bbsArticle_footer -->
+	</div><!-- close footer -->
 	
 
-	
-	
-
-
-</div><!-- close #bbs -->
+</div><!-- close bbs -->
 
 
 

@@ -341,7 +341,7 @@ h3{
  				</dd>
  			</dl>
  		
- 		</div><!-- close .bbsCreated_bottonLine -->
+ 		</div><!-- close bbsCreated_bottomLine -->
  		
  		
  		<div class="bbsCreated_bottomLine">
@@ -370,7 +370,7 @@ h3{
  			
  			</dl>
  	
- 		</div><!-- close .bbsCreated_bottonLine -->
+ 		</div><!-- close bbsCreated_bottomLine -->
  		
  		
  		<div class="bbsCreated_bottomLine">
@@ -395,7 +395,7 @@ h3{
  						%>						
  					</dd>
  			</dl>
- 		</div><!-- close .bbsCreated_bottonLine -->
+ 		</div><!-- close bbsCreated_bottomLine -->
  		
  		
  		
@@ -423,7 +423,7 @@ h3{
  					
  				</dd>
  			</dl>
- 		</div><!-- close #bbsCreated_content  -->
+ 		</div><!-- close bbsCreated_content  -->
  		
  		
  		
@@ -438,7 +438,7 @@ h3{
  			</dl>
  		
  		
- 		</div><!-- close .bbsCreated_noLine -->
+ 		</div><!-- close bbsCreated_noLine -->
  		
  		<div id="bbsCreated_footer">
  			
@@ -472,19 +472,19 @@ h3{
  			}
  			%>	
  			
- 		</div><!-- close #bbsCreated_footer -->
+ 		</div><!-- close bbsCreated_footer -->
  		
  		
  		
  		
  	
  	
- 	</div><!-- close #bbsCreated -->
+ 	</div><!-- close bbsCreated -->
  
  </form>
 
 
-</div><!-- close #bbs -->
+</div><!-- close bbs -->
 
 
 

@@ -39,6 +39,7 @@
 		session.setAttribute("userID", user.getUserID());
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
+		script.println("alert('로그인 되었습니다.')");
 		script.println("location.href='main.jsp'");
 		script.println("</script>");
 	}
@@ -47,7 +48,7 @@
 		script.println("<script>");
 		script.println("alert('비밀번호가 틀렸습니다.')");
 		script.println("history.back()");  //이전 페이지로 이동
-		script.println("<script>");
+		script.println("</script>");
 	}
 	else if(result == -1) {
 		PrintWriter script = response.getWriter();

@@ -146,22 +146,7 @@ h3{
 		
 		//-------------------------------------내용 입력 확인
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		
 		//패스워드 입력 확인----------------------------------
 		//필수 입력 항목 기재 여부 확인 및 공백 처리
@@ -213,7 +198,7 @@ h3{
  				</dd>
  			</dl>
  		
- 		</div><!-- close .bbsCreated_bottonLine -->
+ 		</div><!-- close bbsCreated_bottonLine -->
  		
  		
  		<div class="bbsCreated_bottomLine">
@@ -225,7 +210,7 @@ h3{
  			
  			</dl>
  	
- 		</div><!-- close .bbsCreated_bottonLine -->
+ 		</div><!-- close bbsCreated_bottonLine -->
  		
  		
  		<div class="bbsCreated_bottomLine">
@@ -235,7 +220,7 @@ h3{
  						<input type="email" name="email" size="35" maxlength="50" class="boxTF">
  					</dd>
  			</dl>
- 		</div><!-- close .bbsCreated_bottonLine -->
+ 		</div><!-- close bbsCreated_bottonLine -->
  		
  		
  		
@@ -247,7 +232,7 @@ h3{
  				</dd>
  			
  			</dl>
- 		</div><!-- close #bbsCreated_content  -->
+ 		</div><!-- close bbsCreated_content  -->
  		
  		
  		
@@ -259,9 +244,8 @@ h3{
  					&nbsp;<span style="font-size: 6pt;">(게시물 수정 및 삭제 시 필요)</span>
  				</dd>
  			</dl>
+ 		</div><!-- close bbsCreated_noLine -->
  		
- 		
- 		</div><!-- close .bbsCreated_noLine -->
  		
  		<div id="bbsCreated_footer">
  			<input type="button" value="등록하기" class="btn2" onclick="sendIt()">
@@ -269,25 +253,16 @@ h3{
  			onclick = "document.myForm.subject.focus();">
  			<input type="button" value="작성취소" class="btn2"
  			onclick="javascript:location.href='<%=cp%>/List.jsp'">	
- 		</div><!-- close #bbsCreated_footer -->
+ 		</div><!-- close bbsCreated_footer -->
  		
- 		
- 		
- 		
+ 
  	
- 	
- 	</div><!-- close #bbsCreated -->
+ 	</div><!-- close bbsCreated -->
  
  </form>
 
 
-</div><!-- close #bbs -->
-
-
-
-
-
-
+</div><!-- close bbs -->
 
 
 

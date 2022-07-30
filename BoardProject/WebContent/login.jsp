@@ -27,7 +27,7 @@
 <title>로그인하기</title>
 </head>
 <body>
-	<!-- 네비게이션 -->
+	<!-- 네비게이션 부트스트랩 활용-->
 	<nav class="navbar navbar-default">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed"
@@ -71,7 +71,6 @@
 		<div class="col-lg-4"></div>
 		<div class="col-lg-4">
 		
-			<!-- 점보트론 -->
 			<div class="jumbotron" style="padding-top: 20px;">
 				<form method="post" action="loginAction.jsp">
 					<h3 style="text-align: center;">로그인 화면</h3>

@@ -29,7 +29,7 @@
 <title>회원가입하기</title>
 </head>
 <body>
-	<!-- 네비게이션  -->
+	<!-- 네비게이션 부트스트랩 활용 -->
 	<nav class="navbar navbar-default">
 		<div class="navbar-header">
 		
@@ -71,7 +71,6 @@
 		<div class="col-lg-4"></div>
 		<div class="col-lg-4">
 		
-			<!-- 점보트론 -->
 			<div class="jumbotron" style="padding-top: 20px;">
 			
 				<!-- 로그인 정보를 숨기면서 전송post -->
