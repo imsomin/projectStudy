@@ -1,0 +1,100 @@
+SELECT USER
+FROM DUAL;
+--SCOTT
+
+
+
+DROP TABLE TBL_BBS PURGE;
+--Table TBL_BBS이(가) 삭제되었습니다.
+
+--게시판 테이블 생성
+/*
+CREATE TABLE TBL_BBS(
+BBSID           NUMBER          NOT NULL
+,BBSTITLE       VARCHAR2(50)     NOT NULL
+,USERID         VARCHAR2(50)     NOT NULL
+,BBSDATE        DATE             DEFAULT SYSDATE  NOT NULL
+,BBSCONTENT     VARCHAR2(2048)   NOT NULL
+,BBSAVAILABLE   NUMBER          NOT NULL
+,CONSTRAINT BBS_BBSID_PK PRIMARY KEY(BBSID)
+);
+*/
+--Table TBL_BBS이(가) 생성되었습니다.
+
+
+CREATE TABLE TBL_BBS(
+BBSID           NUMBER          
+,BBSTITLE       VARCHAR2(50)    
+,USERID         VARCHAR2(50)   
+,BBSDATE        DATE            DEFAULT SYSDATE
+,BBSCONTENT     VARCHAR2(2048)  
+,BBSAVAILABLE   NUMBER          
+,CONSTRAINT BBS_BBSID_PK PRIMARY KEY(BBSID)
+);
+--Table TBL_BBS이(가) 생성되었습니다.
+
+
+--인서트 예시
+/*
+INSERT INTO FACILITY_DELETE_REQ(F_DELETE_ID, FACILITY_ID, REQ_USER_ID,
+ADMIN_ID, CONTENT, REQUEST_DATE, OPEN_DATE, ACCEPT_DATE)
+VALUES(FACDELETESEQ.NEXTVAL, '4', '2', '0', '여기 없어진 지 오래되었어요', SYSDATE, NULL, NULL);
+--1 행 이(가) 삽입되었습니다.
+*/
+
+--시퀀스 생성 및 삭제 예시
+/*
+DROP SEQUENCE FACILITYSEQ;
+
+CREATE SEQUENCE SEQ_FACILITY
+NOCACHE;
+*/
+
+
+--별게시판에 게시물 넣기
+INSERT INTO TBL_BBS(BBSID, BBSTITLE, USERID, BBSDATE, BBSCONTENT, BBSAVAILABLE) VALUES(SEQ_BBS.NEXTVAL, '별봐', 'OKAY@AHA.COM', TO_DATE(sysdate, 'YYYY-MM-DD'), '별보자구', null);
+--1 행 이(가) 삽입되었습니다.
+
+--한줄 만들기
+INSERT INTO TBL_BBS(BBSID, BBSTITLE, USERID, BBSDATE, BBSCONTENT, BBSAVAILABLE) VALUES(SEQ_BBS.NEXTVAL, '별봐', 'OKAY@AHA.COM', sysdate, '별보자구', null)
+;
+
+
+select *
+from tbl_bbs;
+--1	별봐	OKAY@AHA.COM	 2022-08-24	별보자구	
+
+
+CREATE SEQUENCE SEQ_BBS
+NOCACHE;
+--Sequence SEQ_BBS이(가) 생성되었습니다.
+
+--drop sequence seq_bbs;
+
+
+rollback;
+--롤백 완료.
+
+--==============================================================================
+
+
+select *
+from tbl_staruser;
+
+DROP TABLE TBL_STARUSER PURGE;
+--Table TBL_STARUSER이(가) 삭제되었습니다.
+
+--사용자 테이블 생성
+CREATE TABLE TBL_STARUSER(
+USERID          VARCHAR2(50)     NOT NULL
+,USERPASSWORD   VARCHAR2(50)     NOT NULL
+,USERNAME       VARCHAR2(50)     NOT NULL
+,CONSTRAINT STARUSER_USERID_PK PRIMARY KEY(USERID)
+);
+--Table TBL_STARUSER이(가) 생성되었습니다.
+
+
+commit;
+--커밋 완료.
+
+
