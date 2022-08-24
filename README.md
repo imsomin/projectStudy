@@ -6,7 +6,7 @@
 # OracleProject
 - 학생 성적 관리 테이블 데이터베이스 구현
 
-# starBoardProject (현재 진행중)
+# starBoard (현재 진행중)
 - 별 관측 사진 공유 및 별 관람 모임 커뮤니티 게시판 구현
 
 # MVC(00~)
