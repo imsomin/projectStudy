@@ -6,8 +6,8 @@
 # OracleProject
 - 학생 성적 관리 테이블 데이터베이스 구현
 
-# BoardProject (현재 진행중)
-- 코로나로 인한 거리두기 상황 아래에서 사람들간 마음의 거리를 좁히기 위한 커뮤니티 웹사이트 구현
+# starBoardProject (현재 진행중)
+- 별 관측 사진 공유 및 별 관람 모임 커뮤니티 게시판 구현
 
 # MVC(00~)
 - Model View Controller 기본 학습
